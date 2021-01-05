@@ -1,0 +1,8 @@
+prefix=/home/harry/Deployment/install
+
+Name: Deployment
+Description: Description of Deployment
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

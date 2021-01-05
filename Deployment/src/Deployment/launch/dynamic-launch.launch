@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="world_name" default="$(find uol_cmp9767m_base)/worlds/cmp9767m_2.world"/>
+  <arg name="fake_localisation" default="false" doc="fake the localisation, sets map_server and world_tf to true."/>
+  <arg name="world_tf" default="$(arg fake_localisation)" doc="provide a tf link to the world (default: false)"/>
+  <arg name="map_server" default="$(arg fake_localisation)" doc="provide a tf link between map and world and run a map server (default: false)"/>
+  <arg name="gui" default="true" doc="run with visible gazebo"/>
+  <arg name="obstacles" default="true" doc="run with human walking around"/>
+  <arg name="second_robot" default="false" doc="launch a second Thorvald" />
+  <!-- Launch the Gazebo world.  -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" unless="$(arg obstacles)">
+    <arg name="use_sim_time" default="true"/>
+    <arg name="world_name" value="$(arg world_name)"/>
+    <arg name="gui" value="$(arg gui)" />
+  </include>
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch" if="$(arg obstacles)">
+    <arg name="use_sim_time" default="true"/>
+    <arg name="world_name" value="$(find uol_cmp9767m_base)/worlds/cmp9767m_actor.world"/>
+    <arg name="gui" value="$(arg gui)" />
+  </include>
+
+  <include file="$(find uol_cmp9767m_base)/launch/thorvald.launch">
+    <arg name="robot_name" value="thorvald_001" />
+    <arg name="x" value="5.0" />
+  </include>
+  <include file="$(find uol_cmp9767m_base)/launch/thorvald.launch" if="$(arg second_robot)">
+    <arg name="robot_name" value="thorvald_002" />
+    <arg name="x" value="-5.0" />
+  </include>
+
+  <group if="$(arg world_tf)">
+    <node 
+      name="world_tf_thorvald_001"
+      pkg="tf"
+      type= "static_transform_publisher"
+      args="0 0 0 0 0 0 /world /thorvald_001/odom 100" />
+    <node 
+      name="world_tf_thorvald_002"
+      pkg="tf"
+      type= "static_transform_publisher"
+      args="0 0 0 0 0 0 /world /thorvald_002/odom 100"  if="$(arg second_robot)"/>
+  </group>
+  <group if="$(arg map_server)">
+    <node 
+      name="map_server"
+      pkg="map_server"
+      type= "map_server"
+      args="$(find uol_cmp9767m_base)/maps/cropped.yaml" />
+    <node 
+      name="world_tf_map"
+      pkg="tf"
+      type= "static_transform_publisher"
+      args="0 0 0 0 0 0 /world /map 100" />
+  </group>
+
+
+    
+    <arg name="robot_name" default="thorvald_001"/>
+    <arg name="tf_prefix" default="$(arg robot_name)/"/>
+
+    <!-- gmapping -->
+    <node name="gmapping" pkg="gmapping" type="slam_gmapping">
+        <remap from="scan" to="$(arg robot_name)/scan" />
+        <param name="odom_frame" type="string" value="$(arg tf_prefix)odom"/>
+        <param name="base_frame" type="string" value="$(arg tf_prefix)base_link"/>
+    </node>
+       <!-- localization -->
+    <node name="fake_localization" pkg="fake_localization" type="fake_localization">
+      <remap from="base_pose_ground_truth" to="$(arg robot_name)/odometry/gazebo" />
+      <param name="odom_frame_id" type="string" value="$(arg tf_prefix)odom"/>
+      <param name="base_frame_id" type="string" value="$(arg tf_prefix)base_link"/>
+    </node>
+    <!-- move_base -->
+    <node name="move_base" pkg="move_base" type="move_base" output="screen">
+        <remap from="odom" to="$(arg robot_name)/odometry/base_raw" />
+        <remap from="cmd_vel" to="$(arg robot_name)/nav_vel" />
+
+        <rosparam file="$(find Deployment)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find Deployment)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+
+        <rosparam file="$(find Deployment)/config/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find Deployment)/config/local_costmap_params_dynamic.yaml" command="load"/>
+
+        <rosparam file="$(find Deployment)/config/dynamic-planner.yaml" command="load"/>
+
+    </node>
+    
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find Deployment)/rviz/config.rviz"/>
+	
+</launch>

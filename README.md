@@ -101,7 +101,7 @@ This is an example of how to list things you need to use the software and how to
   sudo apt-get update && sudo apt-get install curl
   curl https://raw.githubusercontent.com/LCAS/rosdistro/master/lcas-rosdistro-setup.sh | bash -  
   ```
-  * UOL Core ROS libraries 
+  * Melodic Core ROS libraries 
   ```sh
   sudo apt-get install \ 
     ros-melodic-robot-localization \

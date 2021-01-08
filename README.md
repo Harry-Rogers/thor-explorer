@@ -13,14 +13,15 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Harry-Rogers/thor-explorer">
+    <img src="images/LCAS.png" alt="Logo" width="80" height="80">
+    <img src="images/ROS.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Best-README-Template</h3>
+  <h3 align="center">thor-explorer</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    An awesome ROS package for the LCAS Thorvald robot! For deployment around an unknown area!
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
     <br />

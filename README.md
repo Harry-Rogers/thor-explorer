@@ -6,7 +6,6 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -23,14 +22,14 @@
   <p align="center">
     An awesome ROS package for the LCAS Thorvald robot! For deployment around an unknown area!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Harry-Rogers/thor-explorer"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/Harry-Rogers/thor-explorer">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
+    <a href="https://github.com/Harry-Rogers/thor-explorer/issues">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
+    <a href="https://github.com/Harry-Rogers/thor-explorer/issues">Request Feature</a>
   </p>
 </p>
 
@@ -67,7 +66,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src = "images/dynamic.png">
 
 This ROS package uses the prebuilt simulation area and Thorvald system built by LCAS to autonomously navigate an unknown area using the Thorvald system.
 
@@ -122,9 +121,15 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+This package can be reconfigured to work with any robot that uses ROS navigation, 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+_For more examples, please refer to the Documentation List below_
+
+[ROS Navigation Documentation](http://wiki.ros.org/navigation)
+
+[ROS Gmapping Documentation](http://wiki.ros.org/gmapping)
+
+[OpenCV Documentation](https://docs.opencv.org/master/d6/d00/tutorial_py_root.html)
 
 
 
@@ -184,17 +189,14 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-Change shields on website once this is public
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
+[contributors-shield]: https://img.shields.io/github/all-contributors/Harry-Rogers/thor-explorer
 [contributors-url]: https://github.com/Harry-Rogers
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/Harry-Rogers/thor-explorer
 [forks-url]: https://github.com/Harry-Rogers/thor-explorer/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Harry-Rogers/thor-explorer
 [stars-url]: https://github.com/Harry-Rogers/thor-explorer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
+[issues-shield]: https://img.shields.io/github/issues/Harry-Rogers/thor-explorer
 [issues-url]: https://github.com/Harry-Rogers/thor-explorer/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
 [license-url]: https://github.com/Harry-Rogers/thor-explorerblob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/harry-rogers-9832641aa/
-[product-screenshot]: images/screenshot.png
+

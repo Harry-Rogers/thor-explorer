@@ -1,5 +1,7 @@
 # thor-explorer
 
+## WILL BE UPDATED, NOT FINAL VERSION
+
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]

@@ -1,0 +1,8 @@
+prefix=/home/harry/thor-explorer/thor-explorer/devel
+
+Name: thor-explorer
+Description: Description of thor-explorer
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

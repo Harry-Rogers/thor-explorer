@@ -1,0 +1,2 @@
+thor-explorer
+-DCATKIN_DEVEL_PREFIX=/home/harry/thor-explorer/thor-explorer/devel -DCMAKE_INSTALL_PREFIX=/home/harry/thor-explorer/thor-explorer/install -G Unix Makefiles

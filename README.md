@@ -121,7 +121,7 @@ This is an example of how to list things you need to use the software and how to
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-This package can be reconfigured to work with any robot that uses ROS navigation, 
+This package can be reconfigured to work with any robot that uses ROS navigation package and the Gmapping package. 
 
 _For more examples, please refer to the Documentation List below_
 

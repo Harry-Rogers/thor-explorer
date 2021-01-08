@@ -165,7 +165,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Harry Rogers- https://harry-rogers.github.io/
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/Harry-Rogers/thor-explorer)
 
 
 

@@ -1,7 +1,6 @@
 
 import rospy
 from rosgraph_msgs.msg import Log
-from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 from sensor_msgs.msg import LaserScan
 import numpy as np

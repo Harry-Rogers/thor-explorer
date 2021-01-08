@@ -3,11 +3,9 @@ import rospy
 import cv2
 import numpy as np
 from cv_bridge import CvBridge
-from sensor_msgs.msg import Image, CameraInfo, PointCloud
+from sensor_msgs.msg import Image, PointCloud
 from geometry_msgs.msg import Point32, Transform
 import tf
-from move_base_msgs.msg import MoveBaseAction
-import actionlib
 
 
 # https://github.com/Grzegorr/ROSassignment

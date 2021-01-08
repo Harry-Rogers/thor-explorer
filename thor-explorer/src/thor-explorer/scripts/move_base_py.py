@@ -10,11 +10,6 @@ from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
 #to specify in euler thhe required orientation
 from tf.transformations import quaternion_from_euler
 
-import random
-
-import numpy as np
-
-
 
 #Make timer if not at goal after 30s new goal
 

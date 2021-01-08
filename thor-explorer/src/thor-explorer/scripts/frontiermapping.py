@@ -5,13 +5,7 @@ import rospy
 import numpy as np
 from nav_msgs.msg import OccupancyGrid
 import cv2
-import actionlib
-from move_base_msgs.msg import MoveBaseAction, MoveBaseGoal
-from tf.transformations import quaternion_from_euler
-from sensor_msgs.msg import LaserScan
-from geometry_msgs.msg import Twist, Point32
 from std_msgs.msg import String
-import matplotlib.pyplot as plt
 from sensor_msgs.msg import PointCloud
 import random
 import move_base_py
@@ -67,12 +61,12 @@ class Deployment():
         edges =cv2.Canny(img, 0, 255)        
         contours, hierarchy = cv2.findContours(o, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         del hierarchy #cleanup don't need this
-        x =cv2.drawContours(o, contours, -1, (255,255,255), 5)
-        o = cv2.bitwise_not(o)
+        cv2.drawContours(o, contours, -1, (255,255,255), 5)
+        cv2.bitwise_not(o)
         frontier = cv2.bitwise_and(o, edges)
         contours, hierarchy = cv2.findContours(frontier,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         del hierarchy #cleanup don't need this
-        a = cv2.drawContours(frontier, contours, -1, (255,255,255), 2)
+        cv2.drawContours(frontier, contours, -1, (255,255,255), 2)
 
         all_pts = []
         if len(contours) > 0:

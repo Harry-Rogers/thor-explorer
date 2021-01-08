@@ -66,22 +66,22 @@
         <param name="base_frame" type="string" value="$(arg tf_prefix)base_link"/>
     </node>
        <!-- localization -->
-    <include file="$(find Deployment)/launch/ekf.launch"/>
+    <include file="$(find thor-explorer)/launch/ekf.launch"/>
     <!-- move_base -->
     <node name="move_base" pkg="move_base" type="move_base" output="screen">
         <remap from="odom" to="$(arg robot_name)/odometry/base_raw" />
         <remap from="cmd_vel" to="$(arg robot_name)/nav_vel" />
 
-        <rosparam file="$(find Deployment)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
-        <rosparam file="$(find Deployment)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
+        <rosparam file="$(find thor-explorer)/config/costmap_common_params.yaml" command="load" ns="global_costmap"/>
+        <rosparam file="$(find thor-explorer)/config/costmap_common_params.yaml" command="load" ns="local_costmap"/>
 
-        <rosparam file="$(find Deployment)/config/global_costmap_params.yaml" command="load"/>
-        <rosparam file="$(find Deployment)/config/local_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find thor-explorer)/config/global_costmap_params.yaml" command="load"/>
+        <rosparam file="$(find thor-explorer)/config/local_costmap_params.yaml" command="load"/>
 
-        <rosparam file="$(find Deployment)/config/planners.yaml" command="load"/>
+        <rosparam file="$(find thor-explorer)/config/planners.yaml" command="load"/>
 
     </node>
     
-    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find Deployment)/rviz/config.rviz"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find thor-explorer)/rviz/config.rviz"/>
 	
 </launch>

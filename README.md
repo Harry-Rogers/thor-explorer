@@ -1,6 +1,5 @@
 # thor-explorer
 
-[![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
@@ -167,8 +166,6 @@ Harry Rogers- https://harry-rogers.github.io/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/all-contributors/Harry-Rogers/thor-explorer
-[contributors-url]: https://github.com/Harry-Rogers
 [forks-shield]: https://img.shields.io/github/forks/Harry-Rogers/thor-explorer
 [forks-url]: https://github.com/Harry-Rogers/thor-explorer/network/members
 [stars-shield]: https://img.shields.io/github/stars/Harry-Rogers/thor-explorer
@@ -176,5 +173,4 @@ Harry Rogers- https://harry-rogers.github.io/
 [issues-shield]: https://img.shields.io/github/issues/Harry-Rogers/thor-explorer
 [issues-url]: https://github.com/Harry-Rogers/thor-explorer/issues
 [license-shield]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
-[license-url]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
-
+[license-url]: https://github.com/Harry-Rogers/thor-explorer

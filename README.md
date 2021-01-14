@@ -24,7 +24,7 @@
     <a href="https://github.com/Harry-Rogers/thor-explorer"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Harry-Rogers/thor-explorer">View Demo</a>
+    <a href="https://github.com/Harry-Rogers/thor-explorer/blob/main/Demo/Static_Demo.mp4">View Demo</a>
     ·
     <a href="https://github.com/Harry-Rogers/thor-explorer/issues">Report Bug</a>
     ·
@@ -56,7 +56,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -163,26 +162,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Harry Rogers- https://harry-rogers.github.io/
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/Harry-Rogers/thor-explorer)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
 
 
 

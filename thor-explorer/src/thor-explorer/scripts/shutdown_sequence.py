@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import rospy
 import os
@@ -16,17 +16,19 @@ class shutdown_sequence():
         """
         Stops all nodes created once the mapping is complete
         """
-        nodes = os.popen("rosnode list").readlines() # read all nodes
-        for i in range(len(nodes)): # for i in all nodes
-            nodes[i] = nodes[i].replace("\n","") # Create array of nodes
+        #nodes = os.popen("rosnode list").readlines() # read all nodes
+        #for i in range(len(nodes)): # for i in all nodes
+        #    nodes[i] = nodes[i].replace("\n","") # Create array of nodes
         if data.data == "Stop": # If mapping is done
             subprocess.call("./mapmaker.sh", shell = True) #Run mapmaker that will save the map
-            for node in nodes:
-                if node != "Shutdown": #if node is not this node kill all others
-                    os.system("rosnode kill "+ node)
-                elif len(node) == 1: #if there is only one node left kill ie this node
-                    os.system("rosnode kill "+ node)
-
+            os.system("rosnode kill frontiermapping")
+            os.system("rosnode kill weed_detection_py")
+            os.system("rosnode kill weed_publisher")
+            os.system("rosnode kill shutdown_sequence")
+            #for node in nodes:
+             #   print(node)
+             #   if node != "rviz": #if node is not this node or rviz kill all others
+             #       os.system("rosnode kill "+ node)
         else:
             print("Waiting....") #Wait
 

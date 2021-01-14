@@ -1,8 +1,5 @@
 # thor-explorer
 
-## WILL BE UPDATED, NOT FINAL VERSION
-
-
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -68,7 +65,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src = "images/dynamic.png">
+<img src = "images/Static.png">
 
 This ROS package uses the prebuilt simulation area and Thorvald system built by LCAS to autonomously navigate an unknown area using the Thorvald system.
 

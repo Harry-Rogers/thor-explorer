@@ -119,6 +119,16 @@ This is an example of how to list things you need to use the software and how to
 
 This package can be reconfigured to work with any robot that uses ROS navigation package and the Gmapping package. 
 
+To use this package refer to the demo video or follow the instructions below.
+
+```sh
+   cd thor-explorer/thor-explorer
+   source ./devel/setup.bash
+   roslaunch thor-explorer static-launch.launch
+```
+
+This package can be used with the dynamic map, however it is not as successful as the static map. This is explained in the paper.
+
 _For more examples, please refer to the Documentation List below_
 
 [ROS Navigation Documentation](http://wiki.ros.org/navigation)

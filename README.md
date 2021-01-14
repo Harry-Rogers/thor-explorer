@@ -3,7 +3,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 
 
 
@@ -172,5 +171,3 @@ Harry Rogers- https://harry-rogers.github.io/
 [stars-url]: https://github.com/Harry-Rogers/thor-explorer/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Harry-Rogers/thor-explorer
 [issues-url]: https://github.com/Harry-Rogers/thor-explorer/issues
-[license-shield]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
-[license-url]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer

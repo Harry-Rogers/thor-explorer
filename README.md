@@ -176,5 +176,5 @@ Harry Rogers- https://harry-rogers.github.io/
 [issues-shield]: https://img.shields.io/github/issues/Harry-Rogers/thor-explorer
 [issues-url]: https://github.com/Harry-Rogers/thor-explorer/issues
 [license-shield]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
-[license-url]: https://github.com/Harry-Rogers/thor-explorer/blob/main/LICENSE
+[license-url]: https://img.shields.io/github/license/Harry-Rogers/thor-explorer
 

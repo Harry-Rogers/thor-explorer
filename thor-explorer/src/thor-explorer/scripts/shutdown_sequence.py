@@ -20,7 +20,7 @@ class shutdown_sequence():
         #for i in range(len(nodes)): # for i in all nodes
         #    nodes[i] = nodes[i].replace("\n","") # Create array of nodes
         if data.data == "Stop": # If mapping is done
-            subprocess.call("./mapmaker.sh", shell = True) #Run mapmaker that will save the map
+            os.system("rosrun thor-explorer mapmaker.sh")
             os.system("rosnode kill frontiermapping")
             os.system("rosnode kill weed_detection_py")
             os.system("rosnode kill weed_publisher")

@@ -61,8 +61,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-
-<img src = "images/Static.png">
+![Demo gif](https://github.com/Harry-Rogers/thor-explorer/blob/main/Demo/Demo.gif)
 
 This ROS package uses the prebuilt simulation area and Thorvald system built by LCAS to autonomously navigate an unknown area using the Thorvald system.
 

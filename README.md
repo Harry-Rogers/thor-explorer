@@ -65,7 +65,7 @@
 
 This ROS package uses the prebuilt simulation area and Thorvald system built by LCAS to autonomously navigate an unknown area using the Thorvald system.
 
-Whilst the system uses ROS Nav base this package maps the surroundings as well as weeds that are potentially idetinfied.
+Whilst the system uses ROS Nav base this package maps the surroundings as well as weeds that are potentially identified.
 
 ### Built With
 

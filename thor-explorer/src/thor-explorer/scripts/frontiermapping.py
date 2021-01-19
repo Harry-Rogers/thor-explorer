@@ -8,7 +8,7 @@ import numpy as np
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import String
 from sensor_msgs.msg import PointCloud
-import matplotlib.pyplot as plt
+
 """
 Frontier finder code based on Hassan Umari code
 https://github.com/hasauino/rrt_exploration/blob/master/scripts/getfrontier.py
@@ -70,11 +70,8 @@ class Deployment():
         frontier = cv2.bitwise_and(o, edges)
         contours, hierarchy = cv2.findContours(frontier,cv2.RETR_TREE,cv2.CHAIN_APPROX_SIMPLE)
         del hierarchy #cleanup don't need this
-        x = cv2.drawContours(frontier, contours, -1, (255,255,255), 2)
+        cv2.drawContours(frontier, contours, -1, (255,255,255), 2)
         
-        plt.imshow(x)
-        plt.show()
-
         all_pts = [] # Create array for points to go into
         if len(contours) > 0: # If there is places to explore
             for i in range(0, len(contours)): #Go through them all

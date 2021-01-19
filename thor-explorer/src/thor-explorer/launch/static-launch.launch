@@ -87,5 +87,6 @@
     <node pkg="thor-explorer" name="weed_detection_py" type="weed_detection_py.py" output="screen"/>
     <node pkg="thor-explorer" name="weed_publisher" type="weed_publisher.py" output="screen"/>
     <node pkg="thor-explorer" name="frontiermapping" type="frontiermapping.py" output="screen"/>
+
     
 </launch>

@@ -24,7 +24,7 @@ def movebase_client(all_pts, end, index): # movebase_client(all_pts: ndarray, en
     goal.target_pose.header.frame_id = "map" 
     goal.target_pose.header.stamp = rospy.Time.now()
     
-    
+
     if end == True: # if end is true should only be origin and point nearby
         goal.target_pose.pose.position.x = all_pts[0]
         goal.target_pose.pose.position.x = all_pts[1]

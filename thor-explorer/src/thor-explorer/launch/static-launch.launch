@@ -66,7 +66,7 @@
         <param name="base_frame" type="string" value="$(arg tf_prefix)base_link"/>
     </node>
        <!-- localization -->
-    <include file="$(find thor-explorer)/launch/ekf.launch"/>
+    <include file="$(find thor-explorer)/launch/amcl.launch"/>
     <!-- move_base -->
     <node name="move_base" pkg="move_base" type="move_base" output="screen">
         <remap from="odom" to="$(arg robot_name)/odometry/base_raw" />
@@ -87,6 +87,5 @@
     <node pkg="thor-explorer" name="weed_detection_py" type="weed_detection_py.py" output="screen"/>
     <node pkg="thor-explorer" name="weed_publisher" type="weed_publisher.py" output="screen"/>
     <node pkg="thor-explorer" name="frontiermapping" type="frontiermapping.py" output="screen"/>
-
-
+    
 </launch>

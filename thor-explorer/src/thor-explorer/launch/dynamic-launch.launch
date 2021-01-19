@@ -65,7 +65,7 @@
         <param name="odom_frame" type="string" value="$(arg tf_prefix)odom"/>
         <param name="base_frame" type="string" value="$(arg tf_prefix)base_link"/>
     </node>
-    <include file="$(find thor-explorer)/launch/ekf.launch"/>
+    <include file="$(find thor-explorer)/launch/amcl.launch"/>
     <!-- move_base -->
     <node name="move_base" pkg="move_base" type="move_base" output="screen">
         <remap from="odom" to="$(arg robot_name)/odometry/base_raw" />

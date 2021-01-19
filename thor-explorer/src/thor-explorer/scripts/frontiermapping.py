@@ -9,6 +9,8 @@ from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import String
 from sensor_msgs.msg import PointCloud
 
+#Re-write to have move base call frontiers
+#Think it will save time
 
 """
 Frontier finder code based on Hassan Umari code
@@ -40,12 +42,12 @@ class Deployment():
         #Message to wait
         print("Calculating, this will take a while...")
         #get data from map
-        data=mapData.data
-        w=mapData.info.width
-        h=mapData.info.height
+        data = mapData.data
+        w = mapData.info.width
+        h = mapData.info.height
         resolution = mapData.info.resolution
-        Xstartx= mapData.info.origin.position.x
-        Xstarty = mapData.info.origin.position.y
+        start_x = mapData.info.origin.position.x
+        start_y = mapData.info.origin.position.y
 
         #create an empty array 
         img = np.zeros((h,w,1), np.uint8)
@@ -63,7 +65,7 @@ class Deployment():
             o = cv2.inRange(img, 0,1)
 
         #Find the edges in the map for areas that are unknown
-        edges =cv2.Canny(img, 0, 255)
+        edges = cv2.Canny(img, 0, 255)
         contours, hierarchy = cv2.findContours(o, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
         del hierarchy #cleanup don't need this
         cv2.drawContours(o, contours, -1, (255,255,255), 5)
@@ -84,9 +86,9 @@ class Deployment():
                 except ZeroDivisionError: #Some points found will be the origin
                     cx = 0 #set both to 0
                     cy = 0
-                xr = cx*resolution + Xstartx #Convert to metres adding the start point
-                yr = cy* resolution + Xstarty
-                if xr and yr == Xstartx and Xstarty: #If the values are the same as the start point delete them
+                xr = cx*resolution + start_x #Convert to metres adding the start point
+                yr = cy* resolution + start_y
+                if xr and yr == start_x and start_y: #If the values are the same as the start point delete them
                     empty = []
                     empty = [xr,yr]
                     del empty

@@ -8,6 +8,7 @@ import numpy as np
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import String
 from sensor_msgs.msg import PointCloud
+from geometry_msgs.msg import PoseWithCovarianceStamped
 
 """
 Frontier finder code based on Hassan Umari code
@@ -19,14 +20,13 @@ class Deployment():
 
     def __init__(self): #Initialiser
         #Map subscirber
-        self.map_Sub = rospy.Subscriber("/map", OccupancyGrid, callback=self.mapping)
+        self.map_sub = rospy.Subscriber("/map", OccupancyGrid, callback=self.mapping)
         #Frontiers publisher
         self.frontier_pub = rospy.Publisher("/frontiers", String, queue_size=10)
         #Iteration value for index flip
         self.index = 0
         #Flag for signalling when the map is done
         self.end = False
-
 
 
     def mapping(self, mapData): #mapping(self, mapData: OccupancyGrid)
@@ -121,6 +121,7 @@ class Deployment():
         move_base_py.movebase_client(originpoint,self.end, self.index)
         move_base_py.movebase_client([i,i],self.end, self.index)
         self.frontier_pub.publish("Stop") #Publish message to stop everything
+
 
 #Create node 
 rospy.init_node("Frontiers")

@@ -8,7 +8,6 @@ import numpy as np
 from nav_msgs.msg import OccupancyGrid
 from std_msgs.msg import String
 from sensor_msgs.msg import PointCloud
-from geometry_msgs.msg import PoseWithCovarianceStamped
 
 """
 Frontier finder code based on Hassan Umari code

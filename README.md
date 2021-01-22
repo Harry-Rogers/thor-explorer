@@ -126,7 +126,7 @@ To use this package refer to the demo video or follow the instructions below.
    roslaunch thor-explorer static-launch.launch
 ```
 
-This package can be used with the dynamic map, however it is not as successful as the static map. This is explained in the paper.
+To save the weed map save the image in Rviz. This package can be used with the dynamic map, however it is not as successful as the static map. This is explained in the paper.
 
 _For more examples, please refer to the Documentation List below_
 
